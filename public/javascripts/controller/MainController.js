@@ -1,4 +1,4 @@
-var MainController = angular.module('MainController', [])
-	.controller('MainController', ['$scope', () => {
+angular.module('MainController', [])
+	.controller('MainController', ['$scope', function ($scope) {
 		
 	}])

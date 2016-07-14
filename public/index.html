@@ -9,44 +9,19 @@
 </head>
 <body ng-controller="MainController">
 	<div ng-include="'before/header/header.html'"></div>
-	<section class="container">
-		<div class="row">
-			<article>
-				<div class="assay">
-					<h2 class="text-darked">{{ '标题' }}</h2>
-					<div class="clearfix">
-						<span class="pull-left">{{ '作者' }}</span>
-						<span class="pull-right">{{ 'time' }}</span>
-					</div>
-					<div class="assay">{{ '文章' }}</div>
-				</div>
-			</article>
-			<asiede>
-				<ul class="list-group">
-					<li class="list-group-item">
-						<h4 class="clearfix">
-							<a>
-								<span class="pull-left">{{ 'title' }}</span>
-								<span class="pull-right">{{ 'time' }}</span>
-							</a>
-						</h4>
-					</li>
-				</ul>
-			</asiede>
-		</div>
-	</section>
+	<div ng-view></div>
 	<div class="'before/footer/footer.html'"></div>
-	
-	<!-- 控制器 -->
 	<!-- angular官方文件 -->
 	<script src="javascripts/libs/angular.min.js"></script>
 	<script src="javascripts/libs/angular-route.min.js"></script>
 	<script src="javascripts/libs/angular-resource.min.js"></script>
 	<script src="javascripts/libs/angular-animate.min.js"></script>
-
-	<!--  controller -->
-	<script src="javascripts/controller/MainController.js"></script>
 	
+	<!-- route -->
+	<script src="indexRoute.js"></script>
+	<!-- controller -->
+	<script src="javascripts/controller/MainController.js"></script>
+	<script src="javascripts/controller/IndexController.js"></script>
 	<!-- 入口文件 -->
 	<script src="index.js"></script>
 </body>

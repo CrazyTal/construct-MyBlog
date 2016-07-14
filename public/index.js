@@ -1,6 +1,13 @@
-var app = angular.module('app', [
+angular.module('app', [
+	// 官方依赖
 	'ngRoute',
 	'ngResource',
 	'ngAnimate',
-	'MainController'
+
+	// 路由
+	'route',
+
+	// 控制器
+	'MainController',
+	'IndexController'
 ])
