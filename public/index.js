@@ -9,5 +9,6 @@ angular.module('app', [
 
 	// 控制器
 	'MainController',
-	'IndexController'
+	'IndexController',
+	'ArticleController'
 ])

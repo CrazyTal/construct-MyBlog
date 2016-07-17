@@ -3,14 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
-	<link rel="stylesheet" href="stylesheets/index.css">
+	<link rel="stylesheet" href="stylesheets/blog.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<base href="/"> 
 </head>
 <body ng-controller="MainController">
 	<div ng-include="'before/header/header.html'"></div>
 	<div ng-view></div>
-	<div class="'before/footer/footer.html'"></div>
+	<div ng-include="'before/footer/footer.html'"></div>
 	<!-- angular官方文件 -->
 	<script src="javascripts/libs/angular.min.js"></script>
 	<script src="javascripts/libs/angular-route.min.js"></script>
@@ -22,6 +24,7 @@
 	<!-- controller -->
 	<script src="javascripts/controller/MainController.js"></script>
 	<script src="javascripts/controller/IndexController.js"></script>
+	<script src="javascripts/controller/ArticleController.js"></script>
 	<!-- 入口文件 -->
 	<script src="index.js"></script>
 </body>

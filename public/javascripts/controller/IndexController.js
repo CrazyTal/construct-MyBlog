@@ -1,4 +1,4 @@
 angular.module('IndexController', [])
-	.controller('IndexController', ['$scope', function ($scope) {
+	.controller('IndexController', ['$scope', function($scope) {
 		
 	}])

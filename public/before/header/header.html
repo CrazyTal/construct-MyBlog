@@ -1,10 +1,17 @@
 <header class="container">
-	<nav class="row">
-		<ul class="nav nav-pills">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">文章</a></li>
-			<li><a href="#">留言</a></li>
-			<li><a href="#">相关链接</a></li>
-		</ul>
-	</nav>
+	<div class="row">
+		<nav class="col-lg-8 col-md-8">
+			<ul class="nav nav-pills">
+				<li><a href="/">首页</a></li>
+				<li><a href="/article_list">文章</a></li>
+				<li><a href="#">留言</a></li>
+				<li><a href="#">相关链接</a></li>
+			</ul>
+		</nav>
+		<div class="col-lg-4 col-md-4 text-right">
+			<a class="btn btn-success" ng-if="false">{{ '用户名' }}</a>
+			<a class="btn btn-default" ng-if="true">登陆</a>
+			<a class="btn btn-default">注册</a>
+		</div>
+	</div>
 </header>
