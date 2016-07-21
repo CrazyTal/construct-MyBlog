@@ -5,7 +5,7 @@ angular.module('app', [
 	'ngAnimate',
 
 	// 路由
-	'route',
+	'userRoute',
 
 	// 控制器
 	'MainController',

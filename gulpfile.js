@@ -6,17 +6,17 @@ const minifycss = require('gulp-minify-css') // css压缩
 const babel = require('gulp-babel'); 				 // ECMAscript 6 => ECMAscript 5
 // const sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('testLess',() => {
+gulp.task('userLess',() => {
   // 需要编译的less文件, 
   gulp.src(['public/less/blog.less/*.less'])
-  		.pipe(concat('blog.less'))
+  		//.pipe(concat('blog.less'))
       .pipe(less())
-      .pipe(gulp.dest('public/stylesheets/'));  // 输出目录
+      .pipe(gulp.dest('public/stylesheets/user/'));  // 输出目录
 })
 
 // 转译ES 6 -> ES 5
-gulp.task('translate', () => {
-	gulp.src(['public/javascripts/controller/*.js'])
+gulp.task('userTranslate', () => {
+	gulp.src(['public/javascripts/user/controller/*.js'])
 			.pipe(concat('controller.js'))
 			.pipe(babel({
 				presets: ['es2015']
@@ -32,10 +32,28 @@ gulp.task('translate', () => {
 //       .pipe(gulp.dest('public/stylesheets/'));
 // })
 
+gulp.task('adminLess',() => {
+  gulp.src(['public/less/admin.less/*.less'])
+      //.pipe(concat('blog.less'))
+      .pipe(less())
+      .pipe(gulp.dest('public/stylesheets/admin/'));  // 输出目录
+})
+gulp.task('translate', () => {
+  gulp.src(['public/javascripts/admin/controller/*.js'])
+      .pipe(concat('controller.js'))
+      .pipe(babel({
+        presets: ['es2015']
+      }))
+      .pipe(gulp.dest('public/javascripts/'))
+}) 
+
 // 默认任务
 gulp.task('default', () => {
-  gulp.run('testLess');
-  gulp.watch('public/less/blog.less/*.less', () => {
-    gulp.run('testLess');
+  // 'userLess', 
+  gulp.run(['adminLess']);
+  // 'public/less/blog.less/*.less', 
+  gulp.watch(['public/less/admin.less/*.less'], () => {
+    // 'userLess', 
+    gulp.run(['adminLess']);
   })
 })

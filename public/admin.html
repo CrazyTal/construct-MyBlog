@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app="app">
+<html lang="zh-CN" ng-app="admin">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
-	<link rel="stylesheet" href="stylesheets/user/index.css">
+	<link rel="stylesheet" href="/stylesheets/admin/admin.css">
 	<link rel="shortcut icon" href="favicon.ico">
-	<base href="/"> 
+	<base href="/admin"> 
 </head>
-<body ng-controller="MainController">
-	<div ng-include="'user/header/header.html'"></div>
+<body ng-controller="adminMainController">
+	<div ng-include="'admin/header/header.html'"></div>
+	<section class="container-fluid">
+		<div class="row"></div>
+	</section>
 	<div ng-view></div>
-	<div ng-include="'user/footer/footer.html'"></div>
+	<footer class="container-fluid">
+		<div class="row"></div>
+	</footer>
 	<!-- angular官方文件 -->
 	<script src="javascripts/libs/angular.min.js"></script>
 	<script src="javascripts/libs/angular-route.min.js"></script>
@@ -20,12 +25,11 @@
 	<script src="javascripts/libs/angular-animate.min.js"></script>
 	
 	<!-- route -->
-	<script src="indexRoute.js"></script>
+	<script src="adminRoute.js"></script>
 	<!-- controller -->
-	<script src="javascripts/user/controller/MainController.js"></script>
-	<script src="javascripts/user/controller/IndexController.js"></script>
-	<script src="javascripts/user/controller/ArticleController.js"></script>
+	<script src="javascripts/admin/controller/adminMainController.js"></script>
+	<script src="javascripts/admin/controller/adminIndexController.js"></script>
 	<!-- 入口文件 -->
-	<script src="index.js"></script>
+	<script src="admin.js"></script>
 </body>
 </html>

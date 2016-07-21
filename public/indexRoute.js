@@ -1,26 +1,26 @@
-angular.module('route', [])
+angular.module('userRoute', [])
 	.config(['$routeProvider', '$locationProvider', 
 	 	function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'before/view/index.html',
+				templateUrl: 'user/view/index.html',
 				controller: 'IndexController'
 			})
 			.when('/personal', {
-				templateUrl: 'before/view/personal.html',
+				templateUrl: 'user/view/personal.html',
 				controller: 'PersonalController'
 			})
 			.when('/talk', {
-				templateUrl: 'before/view/talk.html',
+				templateUrl: 'user/view/talk.html',
 				controller: 'TalkController'
 			})
 // article module
 			.when('/article_list', {
-				templateUrl: 'before/view/article/article_list.html',
+				templateUrl: 'user/view/article/article_list.html',
 				controller: 'ArticleController'
 			})
 			.when('/article/:article_id', {
-				templateUrl: 'before/view/article/article_content.html',
+				templateUrl: 'user/view/article/article_content.html',
 				controller: 'ArticleController'
 			})
 // error url

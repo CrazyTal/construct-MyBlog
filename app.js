@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
+
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'html');
@@ -16,7 +17,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', routes);
+// 前端主视图
+app.get('/', (req, res) => {
+  res.sendfile('public/index.html')
+});
+
+// 后台主视图
+app.get('/admin', (req, res) => {
+  res.sendfile('public/admin.html')
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
