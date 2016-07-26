@@ -22,10 +22,6 @@ angular.module('userRoute', [])
 			.when('/article/:article_id', {
 				templateUrl: 'user/view/article/article_content.html',
 				controller: 'ArticleController'
-			})
-// error url
-			.otherwise({
-				redirectTo: '/'
 			});
 		$locationProvider.html5Mode(true);
 	}])

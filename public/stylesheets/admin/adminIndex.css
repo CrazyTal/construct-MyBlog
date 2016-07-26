@@ -1,0 +1,22 @@
+.total-box {
+  width: 100%;
+}
+.total-box .total-canvas {
+  position: relative;
+  width: 50%;
+}
+.total-box .total-canvas .canvas-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.total-box .total-canvas .canvas-number:after {
+  content: '%';
+}
+.total-box .total-number {
+  width: 50%;
+  padding-top: 20px;
+  padding-left: 20px;
+}

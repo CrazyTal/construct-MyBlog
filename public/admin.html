@@ -6,15 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<link rel="stylesheet" href="/stylesheets/admin/admin.css">
+	<link rel="stylesheet" href="/stylesheets/admin/adminIndex.css">	
 	<link rel="shortcut icon" href="favicon.ico">
 	<base href="/admin"> 
 </head>
 <body ng-controller="adminMainController">
 	<div ng-include="'admin/header/header.html'"></div>
 	<section class="container-fluid">
-		<div class="row"></div>
+		<div class="row">
+			<aside class="col-lg-2 col-md-2">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<a class="item-content" ng-href="/admin">
+							<i class="pull-left"></i>
+							<span class="pull-left"></span>
+							<i class="pull-right"></i>
+						</a>
+						<ul class="list-group">
+							<li class="list-group-item"></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+			<article class="col-lg-10 col-md-10">
+				<div ng-view></div>
+			</article>
+		</div>
 	</section>
-	<div ng-view></div>
 	<footer class="container-fluid">
 		<div class="row"></div>
 	</footer>

@@ -1,9 +1,9 @@
 angular.module('adminRoute', [])
 	.config(['$routeProvider', '$locationProvider', 
-	function($routeProvider,$locationProvider) {
+		function($routeProvider, $locationProvider) {
 		$routeProvider
-			.when('/admin/', {
-				templateUrl: '/public/admin/index.html',
+			.when('/admin', {
+				templateUrl: 'admin/view/adminIndex.html',
 				controller: 'adminIndexController'
 			})
 		$locationProvider.html5Mode(true);

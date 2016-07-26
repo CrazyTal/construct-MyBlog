@@ -19,14 +19,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 前端主视图
 app.get('/', (req, res) => {
-  res.sendfile('public/index.html')
+  res.sendfile('public/index.html');
 });
 
 // 后台主视图
 app.get('/admin', (req, res) => {
-  res.sendfile('public/admin.html')
+  res.sendfile('public/admin.html');
 });
-
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   var err = new Error('Not Found');

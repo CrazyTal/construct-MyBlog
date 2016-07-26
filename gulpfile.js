@@ -8,7 +8,7 @@ const babel = require('gulp-babel'); 				 // ECMAscript 6 => ECMAscript 5
 
 gulp.task('userLess',() => {
   // 需要编译的less文件, 
-  gulp.src(['public/less/blog.less/*.less'])
+  gulp.src('public/less/blog.less/*.less')
   		//.pipe(concat('blog.less'))
       .pipe(less())
       .pipe(gulp.dest('public/stylesheets/user/'));  // 输出目录
@@ -33,7 +33,7 @@ gulp.task('userTranslate', () => {
 // })
 
 gulp.task('adminLess',() => {
-  gulp.src(['public/less/admin.less/*.less'])
+  gulp.src('public/less/admin.less/*.less')
       //.pipe(concat('blog.less'))
       .pipe(less())
       .pipe(gulp.dest('public/stylesheets/admin/'));  // 输出目录
